@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    long double n;
+    scanf("%Lf",&n);
+    int  a[100];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+
+    }
+    float p=0,np=0,z=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]==0)
+        {
+            z++;
+        }
+        else if(a[i]>0)
+        {
+            p++;
+        }
+        else if(a[i]<0)
+        {
+            np++;
+        }
+
+    }
+    printf("%0.6Lf\n",p/n);
+    printf("%0.6Lf\n",np/n);
+
+    printf("%0.6Lf\n",z/n);
+
+
+
+}
