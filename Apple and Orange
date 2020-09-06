@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int s,t,a,b,m,n,p=0,q=0;
+    scanf("%d%d",&s,&t);
+    scanf("%d%d",&a,&b);
+    scanf("%d%d",&m,&n);
+    int x[m],y[n],i;
+    for(i=0;i<m;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&y[i]);
+    }
+    
+    for(i=0;i<m;i++)
+    {
+        x[i]=x[i]+a;
+        if(x[i]>=s && x[i]<=t)
+        {
+            p++;
+
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        y[i]=y[i]+b;
+        if(y[i]>=s && y[i]<=t)
+        {
+            q++;
+
+        }
+    }
+    printf("%d\n%d",p,q);
+
+
+    
+}
