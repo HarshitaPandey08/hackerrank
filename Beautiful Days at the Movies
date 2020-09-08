@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+int rev(int a)
+{
+    int r,n=0;
+    while(a>0)
+    {
+        r=a%10;
+        n=n*10+r;
+        a=a/10;
+    }
+    return n;
+}
+int main()
+{
+    int i,j,k,a,c=0;
+    scanf("%d%d%d",&i,&j,&k);
+    for(a=i;a<=j;a++)
+    {
+        if(abs(a-rev(a))%k==0)
+        {
+            c++;
+
+        }
+    }
+    printf("%d",c);
+}
