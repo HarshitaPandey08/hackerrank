@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    int a[26],i,h=0,l;
+    for(i=0;i<26;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    char s[10];
+    scanf("%s",s);
+    l=strlen(s);
+    for(i=0;i<l;i++)
+    {
+        if(a[s[i]-97]>h)
+        {
+            h=a[s[i]-97];
+        }
+    }
+    printf("%d",h*l);
+
+
+
+}
