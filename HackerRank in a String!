@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        char s[10000],c[]="hackerrank";
+        scanf("%s",s);
+        int i,j,f=0,k=0;
+        for(i=0;i<strlen(c);i++)
+        {
+            f=0;
+            for(j=k;j<strlen(s);j++)
+            {
+                if(c[i]==s[j])
+                {
+                    f++;
+                    k=j+1;
+
+                    break;
+                }
+
+            }
+            if(f==0)
+            {
+                printf("NO\n");
+                break;
+            }
+
+        }
+        if(f!=0)
+        {
+            printf("YES\n");
+        }
+    }
+
+}
