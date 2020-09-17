@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int x1,v1,x2,v2,t,f=0,i;
+    scanf("%d%d%d%d",&x1,&v1,&x2,&v2);
+    if(v1>v2)
+    {
+
+        i=(x1-x2)%(v2-v1);
+        if(i==0)
+        {
+            printf("YES");
+        }
+         else {
+            printf("NO");
+        }
+
+    }
+    else if(v2>=v1 && x1<x2)
+    {
+        printf("NO");
+    }
+    
+}
